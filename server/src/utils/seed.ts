@@ -24,13 +24,23 @@ const dummyLeads = [
 ];
 
 const dummyUsers = [
-  { name: 'Admin User', email: 'admin@test.com', password: '123456', role: 'Admin' },
-  { name: 'Sales User', email: 'sales@test.com', password: '123456', role: 'Sales' },
+  {
+    name: 'Admin User',
+    email: 'admin@test.com',
+    password: '123456',
+    role: 'Admin' as const,
+  },
+  {
+    name: 'Sales User',
+    email: 'sales@test.com',
+    password: '123456',
+    role: 'Sales' as const,
+  },
 ];
 
 const seedData = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://vishalsureshgaikwad115_db_user:XGA80FB6A9CnxqsL@gigflow.vzgti6a.mongodb.net/GigFlow?appName=GigFlow');
+    await mongoose.connect(process.env.MONGO_URI as string);
     console.log('Connected to MongoDB for seeding...');
 
     await Lead.deleteMany();
