@@ -71,17 +71,17 @@ Alternatively, you can find the **Postman Collection** in the `docs/` folder:
 - **Postman Collection**: [docs/GigFlow.postman_collection.json](./docs/GigFlow.postman_collection.json)
 
 ### Auth Endpoints
-- `POST /api/v1/auth/register` - Create a new account
-- `POST /api/v1/auth/login` - Authenticate and get token
-- `GET /api/v1/auth/me` - Get current user profile
+- `POST /api/auth/register` - Create a new account
+- `POST /api/auth/login` - Authenticate and get token
+- `GET /api/auth/me` - Get current user profile
 
 ### Lead Endpoints
-- `GET /api/v1/leads` - List leads (supports query params: search, status, source, page)
-- `POST /api/v1/leads` - Create a new lead
-- `GET /api/v1/leads/:id` - Get specific lead details
-- `PUT /api/v1/leads/:id` - Update lead information
-- `DELETE /api/v1/leads/:id` - Delete a lead (Admin only)
-- `GET /api/v1/leads/export` - Download leads as CSV
+- `GET /api/leads` - List leads (supports query params: search, status, source, page)
+- `POST /api/leads` - Create a new lead
+- `GET /api/leads/:id` - Get specific lead details
+- `PUT /api/leads/:id` - Update lead information
+- `DELETE /api/leads/:id` - Delete a lead (Admin only)
+- `GET /api/leads/export` - Download leads as CSV
 
 ## Setup Instructions
 1. **Clone the repo**: `git clone <repo-url>`
@@ -100,7 +100,7 @@ Alternatively, you can find the **Postman Collection** in the `docs/` folder:
 - `CLIENT_URL`: URL of the frontend (e.g., http://localhost:5173)
 
 ### Client (.env)
-- `VITE_API_URL`: URL of the backend API (e.g., http://localhost:5000/api/v1)
+- `VITE_API_URL`: URL of the backend API (e.g., http://localhost:5000/api)
 
 ## Deployment
 - **Frontend**: Vercel.

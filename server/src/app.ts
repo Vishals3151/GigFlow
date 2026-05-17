@@ -17,8 +17,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('dev'));
 
-app.use('/api/v1/auth', authRoutes);
-app.use('/api/v1/leads', leadRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/leads', leadRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to GigFlow API' });

@@ -15,7 +15,7 @@ router.use(protect);
 
 /**
  * @swagger
- * /api/v1/leads:
+ * /api/leads:
  *   get:
  *     summary: Get all leads
  *     tags: [Leads]
@@ -48,7 +48,7 @@ router.get('/:id', getLead);
 
 /**
  * @swagger
- * /api/v1/leads:
+ * /api/leads:
  *   post:
  *     summary: Create lead
  *     tags: [Leads]
@@ -63,7 +63,7 @@ router.put('/:id', updateLead);
 
 /**
  * @swagger
- * /api/v1/leads/{id}:
+ * /api/leads/{id}:
  *   delete:
  *     summary: Delete lead (Admin only)
  *     tags: [Leads]
